@@ -3532,10 +3532,31 @@
 
   </footer>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Get today's date in the format YYYY-MM-DD
+            var today = new Date().toISOString().slice(0, 10);
 
+            // Get the build number (you can replace this with your build logic)
+            var buildNumber = 1; // Replace this with your build number logic
 
+            // Create the version string
+            var version = today + "-" + buildNumber;
 
+            // Add the version to an element on the page (you can customize this part)
+            var versionElement = document.getElementById("version");
+            if (versionElement) {
+                versionElement.innerText = "Version " + version;
+            }
+        });
+    </script>
+</head>
+<body>
 
+    <!-- Your existing body content goes here -->
+
+    <!-- An element to display the version (customize this part) -->
+    <div id="version"></div>	
 
   <!--
     - custom js link
